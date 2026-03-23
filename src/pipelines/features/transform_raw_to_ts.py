@@ -13,7 +13,7 @@ def add_missing_slots(ts_data: pd.DataFrame) -> pd.DataFrame:
 
     full_range = pd.date_range(ts_data['pickup_hour'].min(),
                                ts_data['pickup_hour'].max(),
-                               freq='H')
+                               freq='h')
     output = pd.DataFrame()
     for location_id in tqdm(location_ids):
 

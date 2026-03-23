@@ -4,9 +4,6 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from src.utils.paths import RAW_DATA_DIR, TRANSFORMED_DATA_DIR
-
-
 def transform_ts_data_into_features_and_target(
     ts_data: pd.DataFrame,
     input_seq_len: int,
