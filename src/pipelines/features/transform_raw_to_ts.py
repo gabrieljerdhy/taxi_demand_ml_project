@@ -47,7 +47,7 @@ def transform_raw_data_into_ts_data(
 ) -> pd.DataFrame:
     """"""
     # sum rides per location and pickup_hour
-    rides['pickup_hour'] = rides['pickup_datetime'].dt.floor('H')
+    rides['pickup_hour'] = rides['pickup_datetime'].dt.floor('h')
     agg_rides = rides.groupby(['pickup_hour', 'pickup_location_id']).size().reset_index()
     agg_rides.rename(columns={0: 'rides'}, inplace=True)
 
