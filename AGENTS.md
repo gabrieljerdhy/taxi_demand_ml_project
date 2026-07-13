@@ -108,7 +108,7 @@ For behavior changes, add focused tests when practical and run them. If a check 
 
 ### 1. Explore First
 
-- Use the available codebase retrieval tool before editing when file locations or project patterns are not obvious.
+- Use the available codebase-retrieval MCP tool before editing when file locations or project patterns are not obvious.
 - Read the nearest relevant files before changing code.
 - Prefer the current project's root directory as the search context.
 

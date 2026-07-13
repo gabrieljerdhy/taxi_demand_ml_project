@@ -71,18 +71,18 @@ def get_cutoff_indices_features_and_target(
     step_size: int
     ) -> list:
 
-        stop_position = len(data) - 1
-        
-        # Start the first sub-sequence at index position 0
-        subseq_first_idx = 0
-        subseq_mid_idx = input_seq_len
-        subseq_last_idx = input_seq_len + 1
-        indices = []
-        
-        while subseq_last_idx <= stop_position:
-            indices.append((subseq_first_idx, subseq_mid_idx, subseq_last_idx))
-            subseq_first_idx += step_size
-            subseq_mid_idx += step_size
-            subseq_last_idx += step_size
+    stop_position = len(data) - 1
+    
+    # Start the first sub-sequence at index position 0
+    subseq_first_idx = 0
+    subseq_mid_idx = input_seq_len
+    subseq_last_idx = input_seq_len + 1
+    indices = []
+    
+    while subseq_last_idx <= stop_position:
+        indices.append((subseq_first_idx, subseq_mid_idx, subseq_last_idx))
+        subseq_first_idx += step_size
+        subseq_mid_idx += step_size
+        subseq_last_idx += step_size
 
-        return indices
+    return indices
